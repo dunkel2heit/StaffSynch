@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Employee - StaffSync</title>
+    <link rel="stylesheet" href="/static/style/style.css">
+</head>
+<body>
+
+<header>
+    <h1>Edit Employee</h1>
+
+```
+<nav>
+    <ul>
+        <li><a href="/dashboard">Dashboard</a></li>
+        <li><a href="/logout">Logout</a></li>
+    </ul>
+</nav>
+```
+
+</header>
+
+<main>
+
+```
+<section class="form-section">
+
+    <h2>Update Employee Information</h2>
+
+    <form method="POST">
+
+        <input
+            type="text"
+            name="first_name"
+            value="{{ employee.first_name }}"
+            placeholder="First Name"
+            required
+        >
+
+        <input
+            type="text"
+            name="last_name"
+            value="{{ employee.last_name }}"
+            placeholder="Last Name"
+            required
+        >
+
+        <input
+            type="email"
+            name="email"
+            value="{{ employee.email }}"
+            placeholder="Email"
+            required
+        >
+
+        <input
+            type="text"
+            name="department"
+            value="{{ employee.department }}"
+            placeholder="Department"
+            required
+        >
+
+        <input
+            type="number"
+            step="0.01"
+            name="salary"
+            value="{{ employee.salary }}"
+            placeholder="Salary"
+            required
+        >
+
+        <button type="submit">
+            Save Changes
+        </button>
+
+        <a
+            href="/admin_panel"
+            class="edit-btn"
+            style="text-align:center;"
+        >
+            Cancel
+        </a>
+
+    </form>
+
+</section>
+```
+
+</main>
+
+<footer>
+    <p>
+        © 2026 StaffSync Employee Management System
+    </p>
+</footer>
+
+</body>
+</html>
